@@ -26,7 +26,7 @@ module.exports = {
   },
 
   course: {
-    code:             'Plantilla base',
+    code:             'CUADERNO DE APRENDIZAJE 1',   // ronda del cliente del 2026-10-26
     name:             'Catálogo de componentes',
     subtitle:         'Plantilla base del recurso educativo',
     duration:         '',
@@ -54,7 +54,7 @@ module.exports = {
 
     /* PLANTILLA BASE: cada tema reúne una familia de componentes del catálogo; el texto de los
        ejemplos es un solo tema real («Cómo se escribe un artículo académico»). */
-    { id: 'tema1',        titulo: 'Texto y énfasis', tipo: 'tema',
+    { id: 'tema1',        titulo: 'Texto y énfasis', tipo: 'tema', rotulo: 'S1',
       secciones: [ { titulo: 'Subtítulos', ancla: 'subtitulos' },
                    { titulo: 'Listas', ancla: 'listas' },
                    { titulo: 'Tablas', ancla: 'tablas' },
@@ -66,14 +66,14 @@ module.exports = {
                    { titulo: 'Comparativo', ancla: 'comparativo' },
                    { titulo: 'Bloque de código', ancla: 'bloque-de-codigo' } ] },
 
-    { id: 'tema2',        titulo: 'Figuras, video y podcast', tipo: 'tema',
+    { id: 'tema2',        titulo: 'Figuras, video y podcast', tipo: 'tema', rotulo: 'S2',
       secciones: [ { titulo: 'Imagen con leyenda', ancla: 'imagenes-y-figuras' },
                    { titulo: 'Figura pendiente', ancla: 'figura-pendiente' },
                    { titulo: 'Ilustración explicativa', ancla: 'ilustracion-explicativa' },
                    { titulo: 'Video', ancla: 'video' },
                    { titulo: 'Pódcast · con foto', ancla: 'podcast' } ] },
 
-    { id: 'tema3',        titulo: 'Componentes básicos', tipo: 'tema',
+    { id: 'tema3',        titulo: 'Componentes básicos', tipo: 'tema', rotulo: 'S3',
       secciones: [ { titulo: 'Acordeón', ancla: 'acordeones' },
                    { titulo: 'Carrusel', ancla: 'carrusel-y-slide' },
                    { titulo: 'Carrusel de fotos', ancla: 'carrusel-de-fotos' },
@@ -82,7 +82,7 @@ module.exports = {
                    { titulo: 'Pestañas - línea', ancla: 'pestanas-linea' },
                    { titulo: 'Pestañas verticales', ancla: 'pestanas-verticales' } ] },
 
-    { id: 'tema4',        titulo: 'Componentes de pasos y líneas de tiempo', tipo: 'tema',
+    { id: 'tema4',        titulo: 'Componentes de pasos y líneas de tiempo', tipo: 'tema', rotulo: 'S4',
       secciones: [ { titulo: 'Acordeón numerado', ancla: 'acordeon-numerado' },
                    { titulo: 'Ruta en zigzag', ancla: 'ruta-en-zigzag' },
                    { titulo: 'Ruta de inicio a meta', ancla: 'ruta-de-inicio-a-meta' },
@@ -93,7 +93,7 @@ module.exports = {
                    { titulo: 'Línea de tiempo tipo 2', ancla: 'linea-de-tiempo-tipo-2' },
                    { titulo: 'Línea de tiempo tipo 3', ancla: 'linea-de-tiempo-tipo-3' } ] },
 
-    { id: 'tema5',        titulo: 'Tarjetas', tipo: 'tema',
+    { id: 'tema5',        titulo: 'Tarjetas', tipo: 'tema', rotulo: 'S5',
       secciones: [ { titulo: 'Tarjetas con icono - izquierda', ancla: 'tarjetas-con-icono-izquierda' },
                    { titulo: 'Ejemplo de uso de tarjetas con icono - izquierda', ancla: 'ejemplo-tarjetas-con-icono-izquierda' },
                    { titulo: 'Tarjetas con icono - centrado', ancla: 'tarjetas-con-icono-centrado' },
@@ -106,7 +106,7 @@ module.exports = {
                    { titulo: 'Tarjetas que giran', ancla: 'tarjetas-que-giran' },
                    { titulo: 'Tarjeta con botón', ancla: 'tarjeta-con-boton' } ] },
 
-    { id: 'tema6',        titulo: 'Infografías e interactivos', tipo: 'tema',
+    { id: 'tema6',        titulo: 'Infografías e interactivos', tipo: 'tema', rotulo: 'S6',
       secciones: [ { titulo: 'Imagen con puntos interactivos (hotspots)', ancla: 'imagen-con-puntos-interactivos' },
                    { titulo: 'Tarjeta con cifra destacada - clara', ancla: 'tarjeta-con-cifra-destacada' },
                    { titulo: 'Tarjeta con cifra destacada - oscura', ancla: 'tarjeta-con-cifra-destacada-oscura' },
@@ -115,7 +115,7 @@ module.exports = {
                    { titulo: 'Proceso escalonado', ancla: 'proceso-escalonado' },
                    { titulo: 'Antes y después', ancla: 'antes-y-despues' } ] },
 
-    { id: 'tema7',        titulo: 'Actividades', tipo: 'tema',
+    { id: 'tema7',        titulo: 'Actividades', tipo: 'tema', rotulo: 'S7',
       secciones: [ { titulo: 'Pregunta', ancla: 'pregunta' },
                    { titulo: 'Verdadero o falso', ancla: 'verdadero-o-falso' },
                    { titulo: 'Relacionar', ancla: 'relacionar' },
