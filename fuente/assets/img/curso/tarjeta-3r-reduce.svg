@@ -1,0 +1,16 @@
+<!-- UP-001: figura de ejemplo del catálogo con la paleta de UP, sin el escalón de cuadros de Andina (D9). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Bolsa de tela con alimentos.">
+  <defs><clipPath id="c"><circle cx="80" cy="80" r="80"/></clipPath></defs>
+  <g clip-path="url(#c)">
+  <rect width="160" height="160" fill="#EEF4F2"/>
+  <ellipse cx="80" cy="140" rx="6" ry="8" fill="#0F5C51" opacity=".12"/>
+  <rect x="90" y="22" width="16" height="60" rx="8" transform="rotate(16 98 52)" fill="#B9975B"/>
+  <path d="M94 32l9 3M92 41l9 3M90 50l9 3" stroke="#8C6A33" stroke-width="2.5" stroke-linecap="round" transform="rotate(16 98 52)"/>
+  <path d="M58 70c-8-14-4-30 6-36 4 12 2 26-6 36z" fill="#0D4E45"/>
+  <path d="M64 70c0-16 10-26 22-28-2 12-10 22-22 28z" fill="#0F5C51"/>
+  <circle cx="76" cy="66" r="10" fill="#4B857C"/>
+  <path d="M44 70h72l-6 62a6 6 0 0 1-6 5H56a6 6 0 0 1-6-5z" fill="#FFFFFF" stroke="#0F5C51" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M58 72c0-26 44-26 44 0" fill="none" stroke="#0F5C51" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M60 98h40M63 110h34" stroke="#4B857C" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

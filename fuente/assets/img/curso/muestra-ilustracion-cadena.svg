@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img"
+     aria-label="Cinco tarjetas en fila, unidas por flechas de izquierda a derecha: una norma con su sello; una política con sus reglas y la persona que responde por ella; una base de datos con un candado puesto encima; un registro de entradas, el único enmarcado en dorado; y un calendario con el mismo día de cada periodo marcado como revisado, del que sale una flecha que vuelve al registro. Debajo, cada pieza lleva su nombre: obligación, decisión de gobierno, control técnico, evidencia y verificación periódica.">
+  <!-- Ilustración de marca · Posgrados Panamericana · plantilla-base · muestra de la familia (UP-001, D9)
+       Misma idea que la muestra provisional (la cadena de cinco pasos con una vuelta atrás),
+       redibujada en la familia de UP (INSTITUCION.md §1.7): plana, geométrica, sin trazo,
+       esquinas de 4 px, flechas en ángulo recto (el sistema no tiene curvas). Los cinco
+       rótulos son literales. El Tahalí lo pone la piel (::after de la figura), no el SVG.
+       Único dorado: el marco del registro (la evidencia), lo que vuelve demostrable lo anterior
+       y adonde regresa la verificación. Guion en insumos/ILUSTRACIONES.md. -->
+  <defs>
+    <linearGradient id="ilu-cadena-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#E4EEEB"/>
+      <stop offset="55%"  stop-color="#ECF1EF"/>
+      <stop offset="100%" stop-color="#F6F8F7"/>
+    </linearGradient>
+    <filter id="ilu-cadena-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0A4039" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="4" fill="url(#ilu-cadena-fondo)"/>
+
+  <!-- Las cinco tarjetas; la de la evidencia, sobre su marco dorado -->
+  <g filter="url(#ilu-cadena-sombra)">
+    <rect x="48"  y="110" width="184" height="200" rx="4" fill="#FFFFFF"/>
+    <rect x="278" y="110" width="184" height="200" rx="4" fill="#FFFFFF"/>
+    <rect x="508" y="110" width="184" height="200" rx="4" fill="#FFFFFF"/>
+    <!-- ÚNICO DORADO: el marco de la evidencia -->
+    <rect x="732" y="104" width="196" height="212" rx="6" fill="#B9975B"/>
+    <rect x="968" y="110" width="184" height="200" rx="4" fill="#FFFFFF"/>
+  </g>
+  <rect x="738" y="110" width="184" height="200" rx="4" fill="#FFFFFF"/>
+
+  <!-- ══ 1 · Obligación: la norma, con el sello de quien la impone ══ -->
+  <rect x="72" y="134" width="96" height="10" rx="2" fill="#0A4039"/>
+  <g fill="#CFE0DC">
+    <rect x="72" y="162" width="136" height="8" rx="2"/>
+    <rect x="72" y="180" width="120" height="8" rx="2"/>
+    <rect x="72" y="198" width="136" height="8" rx="2"/>
+    <rect x="72" y="216" width="104" height="8" rx="2"/>
+    <rect x="72" y="234" width="72"  height="8" rx="2"/>
+  </g>
+  <polygon points="168,272 178,272 174,300 166,292" fill="#0A4039"/>
+  <polygon points="180,272 190,272 192,292 184,300" fill="#0A4039"/>
+  <circle cx="179" cy="262" r="22" fill="#0F5C51"/>
+  <circle cx="179" cy="262" r="12" fill="#3F7D74"/>
+
+  <!-- ══ 2 · Decisión de gobierno: reglas escritas y una persona que responde ══ -->
+  <rect x="302" y="134" width="100" height="10" rx="2" fill="#0A4039"/>
+  <g fill="#3F7D74">
+    <rect x="302" y="160" width="10" height="10" rx="2"/>
+    <rect x="302" y="180" width="10" height="10" rx="2"/>
+    <rect x="302" y="200" width="10" height="10" rx="2"/>
+  </g>
+  <g fill="#CFE0DC">
+    <rect x="320" y="161" width="118" height="8" rx="2"/>
+    <rect x="320" y="181" width="96"  height="8" rx="2"/>
+    <rect x="320" y="201" width="110" height="8" rx="2"/>
+  </g>
+  <rect x="302" y="226" width="136" height="3" fill="#ECF1EF"/>
+  <!-- quien responde, con su nombre -->
+  <circle cx="320" cy="252" r="12" fill="#0F5C51"/>
+  <path d="M300 290 v-10 a20 14 0 0 1 40 0 v10 z" fill="#0F5C51"/>
+  <rect x="354" y="262" width="76" height="9" rx="2" fill="#0A4039"/>
+  <rect x="354" y="280" width="84" height="4" rx="2" fill="#CFE0DC"/>
+
+  <!-- ══ 3 · Control técnico: el candado, puesto sobre el dato ══ -->
+  <ellipse cx="600" cy="262" rx="52" ry="14" fill="#0F5C51"/>
+  <rect x="548" y="226" width="104" height="36" fill="#0F5C51"/>
+  <ellipse cx="600" cy="226" rx="52" ry="14" fill="#3F7D74"/>
+  <rect x="548" y="188" width="104" height="38" fill="#3F7D74"/>
+  <ellipse cx="600" cy="188" rx="52" ry="14" fill="#0F5C51"/>
+  <rect x="548" y="150" width="104" height="38" fill="#0F5C51"/>
+  <ellipse cx="600" cy="150" rx="52" ry="14" fill="#CFE0DC"/>
+  <path d="M586 216 V200 a14 14 0 0 1 28 0 V216 h-6 V200 a8 8 0 0 0 -16 0 V216 z" fill="#FFFFFF"/>
+  <rect x="578" y="212" width="44" height="36" rx="3" fill="#FFFFFF"/>
+  <circle cx="600" cy="226" r="5" fill="#0A4039"/>
+  <rect x="598" y="228" width="4" height="10" rx="1" fill="#0A4039"/>
+
+  <!-- ══ 4 · Evidencia: el registro, entrada por entrada ══ -->
+  <g fill="#0F5C51">
+    <rect x="760" y="138" width="30" height="8" rx="2"/>
+    <rect x="760" y="164" width="30" height="8" rx="2"/>
+    <rect x="760" y="190" width="30" height="8" rx="2"/>
+    <rect x="760" y="216" width="30" height="8" rx="2"/>
+    <rect x="760" y="242" width="30" height="8" rx="2"/>
+    <rect x="760" y="268" width="30" height="8" rx="2"/>
+  </g>
+  <g fill="#3F7D74">
+    <rect x="800" y="137" width="10" height="10" rx="2"/>
+    <rect x="800" y="163" width="10" height="10" rx="2"/>
+    <rect x="800" y="189" width="10" height="10" rx="2"/>
+    <rect x="800" y="215" width="10" height="10" rx="2"/>
+    <rect x="800" y="241" width="10" height="10" rx="2"/>
+    <rect x="800" y="267" width="10" height="10" rx="2"/>
+  </g>
+  <g fill="#CFE0DC">
+    <rect x="820" y="138" width="76" height="8" rx="2"/>
+    <rect x="820" y="164" width="60" height="8" rx="2"/>
+    <rect x="820" y="190" width="82" height="8" rx="2"/>
+    <rect x="820" y="216" width="54" height="8" rx="2"/>
+    <rect x="820" y="242" width="70" height="8" rx="2"/>
+    <rect x="820" y="268" width="64" height="8" rx="2"/>
+  </g>
+
+  <!-- ══ 5 · Verificación periódica: el mismo día de cada periodo, revisado ══ -->
+  <rect x="968" y="110" width="184" height="32" rx="4" fill="#0F5C51"/>
+  <rect x="968" y="130" width="184" height="12" fill="#0F5C51"/>
+  <rect x="1004" y="100" width="8" height="22" rx="2" fill="#0A4039"/>
+  <rect x="1108" y="100" width="8" height="22" rx="2" fill="#0A4039"/>
+  <g fill="#ECF1EF">
+    <rect x="1016" y="160" width="26" height="24" rx="2"/><rect x="1048" y="160" width="26" height="24" rx="2"/><rect x="1080" y="160" width="26" height="24" rx="2"/><rect x="1112" y="160" width="26" height="24" rx="2"/>
+    <rect x="1016" y="192" width="26" height="24" rx="2"/><rect x="1048" y="192" width="26" height="24" rx="2"/><rect x="1080" y="192" width="26" height="24" rx="2"/><rect x="1112" y="192" width="26" height="24" rx="2"/>
+    <rect x="1016" y="224" width="26" height="24" rx="2"/><rect x="1048" y="224" width="26" height="24" rx="2"/><rect x="1080" y="224" width="26" height="24" rx="2"/><rect x="1112" y="224" width="26" height="24" rx="2"/>
+    <rect x="1016" y="256" width="26" height="24" rx="2"/><rect x="1048" y="256" width="26" height="24" rx="2"/><rect x="1080" y="256" width="26" height="24" rx="2"/><rect x="1112" y="256" width="26" height="24" rx="2"/>
+  </g>
+  <g fill="#0F5C51">
+    <rect x="984" y="160" width="26" height="24" rx="2"/>
+    <rect x="984" y="192" width="26" height="24" rx="2"/>
+    <rect x="984" y="224" width="26" height="24" rx="2"/>
+    <rect x="984" y="256" width="26" height="24" rx="2"/>
+  </g>
+  <g fill="#FFFFFF">
+    <polygon points="990,172 993,169 996,172 1003,165 1006,168 996,178"/>
+    <polygon points="990,204 993,201 996,204 1003,197 1006,200 996,210"/>
+    <polygon points="990,236 993,233 996,236 1003,229 1006,232 996,242"/>
+    <polygon points="990,268 993,265 996,268 1003,261 1006,264 996,274"/>
+  </g>
+
+  <!-- La cadena: cada paso lleva al siguiente (flechas planas, la punta antes del borde) -->
+  <g fill="#3F7D74">
+    <rect x="243" y="208" width="14" height="4"/><polygon points="257,202 267,210 257,218"/>
+    <rect x="473" y="208" width="14" height="4"/><polygon points="487,202 497,210 487,218"/>
+    <rect x="700" y="208" width="14" height="4"/><polygon points="714,202 724,210 714,218"/>
+    <rect x="936" y="208" width="14" height="4"/><polygon points="950,202 960,210 950,218"/>
+  </g>
+
+  <!-- La vuelta atrás: de la verificación a la evidencia, en ángulo recto; baja en la dirección de su punta -->
+  <g fill="#3F7D74">
+    <rect x="1058" y="52" width="4" height="46"/>
+    <rect x="828" y="52" width="234" height="4"/>
+    <rect x="828" y="52" width="4" height="34"/>
+    <polygon points="820,84 840,84 830,96"/>
+  </g>
+
+  <!-- Los nombres de los pasos, literales -->
+  <g font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="17" font-weight="600" fill="#0A4039" text-anchor="middle">
+    <text x="140"  y="356">obligación</text>
+    <text x="370"  y="356">decisión de gobierno</text>
+    <text x="600"  y="356">control técnico</text>
+    <text x="830"  y="356">evidencia</text>
+    <text x="1060" y="356">verificación periódica</text>
+  </g>
+</svg>

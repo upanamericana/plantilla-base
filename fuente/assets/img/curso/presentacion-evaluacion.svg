@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 340" width="420" height="340" role="img" aria-label="Una pila de tarjetas de pregunta, una detrás de otra. La de adelante muestra un enunciado y cuatro opciones en fila; una de ellas está marcada en dorado. Abajo, a la derecha, un botón verde con una flecha hacia la derecha, listo para empezar.">
+  <!-- Ilustración de marca · Posgrados Panamericana · plantilla-base, presentación de la Evaluación
+       de la unidad (.ova-eval-intro, tema7 y primera diapositiva de evaluacion.html). UP-001 T5 (D9):
+       la misma idea de la versión provisional, en la familia de UP. Formato de la tarjeta de catálogo
+       (420 × 340, fondo transparente sobre el lino de .ova-eval-intro), como ilustracion-descarga.svg.
+       Una pregunta por diapositiva → tarjetas apiladas; la de adelante es la primera. Plana, geométrica,
+       sin trazo de contorno en las masas; sombra de la familia (#0A4039 al 14 %).
+       Encuadre: un Tahalí blanco pequeño en la cabecera de la tarjeta (sin girar). Sin el escalón de
+       cuadros ni los píxeles de Andina.
+       Único dorado: la opción elegida, lo que la evaluación pide hacer. Sin texto ni fuentes. -->
+  <defs>
+    <filter id="ilu-evaluacion-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0A4039" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- Las preguntas que siguen: dos tarjetas detrás, escalonadas -->
+  <g filter="url(#ilu-evaluacion-sombra)">
+    <rect x="112" y="18" width="230" height="248" rx="12" fill="#CFE0DC"/>
+    <path d="M112 30 a12 12 0 0 1 12 -12 h206 a12 12 0 0 1 12 12 v10 h-230 z" fill="#3F7D74"/>
+    <rect x="86" y="40" width="230" height="248" rx="12" fill="#FFFFFF"/>
+    <path d="M86 52 a12 12 0 0 1 12 -12 h206 a12 12 0 0 1 12 12 v10 h-230 z" fill="#0F5C51"/>
+
+    <!-- La primera pregunta -->
+    <rect x="60" y="62" width="230" height="248" rx="12" fill="#FFFFFF"/>
+  </g>
+  <path d="M60 74 a12 12 0 0 1 12 -12 h206 a12 12 0 0 1 12 12 v28 h-230 z" fill="#0A4039"/>
+  <!-- Tahalí de encuadre, en blanco -->
+  <polygon points="80,71 85.4,71 95,93 89.6,93" fill="#FFFFFF" opacity=".8"/>
+  <rect x="106" y="78" width="100" height="8" rx="4" fill="#FFFFFF" opacity=".85"/>
+
+  <!-- Enunciado -->
+  <rect x="80" y="120" width="180" height="8" rx="4" fill="#CFE0DC"/>
+  <rect x="80" y="136" width="136" height="8" rx="4" fill="#CFE0DC"/>
+
+  <!-- Cuatro opciones -->
+  <g fill="#F6F8F7">
+    <rect x="78" y="160" width="194" height="28" rx="14"/>
+    <rect x="78" y="232" width="194" height="28" rx="14"/>
+    <rect x="78" y="268" width="194" height="28" rx="14"/>
+  </g>
+  <g fill="none" stroke="#3F7D74" stroke-width="3">
+    <circle cx="94" cy="174" r="7"/>
+    <circle cx="94" cy="246" r="7"/>
+    <circle cx="94" cy="282" r="7"/>
+  </g>
+  <g fill="#CFE0DC">
+    <rect x="110" y="170" width="112" height="8" rx="4"/>
+    <rect x="110" y="242" width="92" height="8" rx="4"/>
+    <rect x="110" y="278" width="124" height="8" rx="4"/>
+  </g>
+
+  <!-- ÚNICO DORADO: la opción elegida -->
+  <rect x="78" y="196" width="194" height="28" rx="14" fill="#F1EAD9" stroke="#B9975B" stroke-width="3"/>
+  <circle cx="94" cy="210" r="7" fill="none" stroke="#0A4039" stroke-width="3"/>
+  <circle cx="94" cy="210" r="3.5" fill="#0A4039"/>
+  <rect x="110" y="206" width="100" height="8" rx="4" fill="#0F5C51" opacity=".6"/>
+
+  <!-- Comenzar: el botón verde, con su flecha -->
+  <g filter="url(#ilu-evaluacion-sombra)">
+    <circle cx="370" cy="280" r="30" fill="#0F5C51"/>
+  </g>
+  <path d="M356 280 h26 M371 269 l11 11 l-11 11" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

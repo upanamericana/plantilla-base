@@ -1,0 +1,30 @@
+<!-- UP-001: figura de ejemplo del catálogo con la paleta de UP, sin el escalón de cuadros de Andina (D9). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400" role="img" aria-label="Un grupo de ocho estudiantes en una tarjeta blanca y, debajo, dos rótulos: Total: 40 y Porcentaje: 25 %.">
+  <!-- Plantilla base · Slider de pasos · paso 1. Imagen sugerida: un grupo de estudiantes con los rótulos «Total: 40» y «Porcentaje: 25 %». Único dorado: el rótulo del porcentaje, el dato que se va a aplicar.
+       Familia: fondo verde claro degradado, piezas blancas con sombra, trazo verde, un solo dorado. -->
+  <defs>
+    <linearGradient id="sp1-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E4EEEB"/><stop offset="55%" stop-color="#ECF1EF"/><stop offset="100%" stop-color="#F6F8F7"/>
+    </linearGradient>
+    <filter id="sp1-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0A4039" flood-opacity="0.14"/>
+    </filter>
+    <g id="sp1-persona"><circle cx="0" cy="-11" r="7"/><path d="M-12 12 a12 12 0 0 1 24 0 v3 h-24z"/></g>
+  </defs>
+  <rect width="560" height="400" rx="6" fill="url(#sp1-fondo)"/>
+  <rect x="90" y="56" width="380" height="176" rx="6" fill="#FFFFFF" filter="url(#sp1-sombra)"/>
+  <use href="#sp1-persona" x="170" y="124" fill="#0F5C51"/>
+  <use href="#sp1-persona" x="225" y="124" fill="#3F7D74"/>
+  <use href="#sp1-persona" x="280" y="124" fill="#0F5C51"/>
+  <use href="#sp1-persona" x="335" y="124" fill="#3F7D74"/>
+  <use href="#sp1-persona" x="390" y="124" fill="#0F5C51"/>
+  <use href="#sp1-persona" x="170" y="186" fill="#3F7D74"/>
+  <use href="#sp1-persona" x="225" y="186" fill="#0F5C51"/>
+  <use href="#sp1-persona" x="280" y="186" fill="#3F7D74"/>
+  <use href="#sp1-persona" x="335" y="186" fill="#0F5C51"/>
+  <use href="#sp1-persona" x="390" y="186" fill="#3F7D74"/>
+  <rect x="70" y="264" width="196" height="64" rx="6" fill="#FFFFFF" stroke="#0F5C51" stroke-width="2.5" filter="url(#sp1-sombra)"/>
+  <text x="168" y="305" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="24" font-weight="700" fill="#0A4039" text-anchor="middle">Total: 40</text>
+  <rect x="290" y="264" width="216" height="64" rx="6" fill="#FFFFFF" stroke="#B9975B" stroke-width="3.5" filter="url(#sp1-sombra)"/>
+  <text x="398" y="305" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="24" font-weight="700" fill="#0A4039" text-anchor="middle">Porcentaje: 25 %</text>
+</svg>

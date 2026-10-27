@@ -1,0 +1,28 @@
+<!-- UP-001: figura de ejemplo del catálogo con la paleta de UP, sin el escalón de cuadros de Andina (D9). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400" role="img" aria-label="Tres tarjetas unidas por flechas: 25 %, luego 25 sobre 100 y luego 0,25, la última contorneada en dorado.">
+  <!-- Plantilla base · Slider de pasos · paso 2. Imagen sugerida: la transformación «25 % → 25/100 → 0,25». Único dorado: el decimal, el resultado de la conversión.
+       Familia: fondo verde claro degradado, piezas blancas con sombra, trazo verde, un solo dorado. -->
+  <defs>
+    <linearGradient id="sp2-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E4EEEB"/><stop offset="55%" stop-color="#ECF1EF"/><stop offset="100%" stop-color="#F6F8F7"/>
+    </linearGradient>
+    <filter id="sp2-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0A4039" flood-opacity="0.14"/>
+    </filter>
+    <g id="sp2-persona"><circle cx="0" cy="-11" r="7"/><path d="M-12 12 a12 12 0 0 1 24 0 v3 h-24z"/></g>
+  </defs>
+  <rect width="560" height="400" rx="6" fill="url(#sp2-fondo)"/>
+  <rect x="40" y="130" width="140" height="140" rx="6" fill="#FFFFFF" stroke="#0F5C51" stroke-width="2" filter="url(#sp2-sombra)"/>
+  <text x="110" y="214" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="42" font-weight="800" fill="#0A4039" text-anchor="middle">25 %</text>
+  <rect x="210" y="130" width="140" height="140" rx="6" fill="#FFFFFF" stroke="#0F5C51" stroke-width="2" filter="url(#sp2-sombra)"/>
+  <text x="280" y="192" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="38" font-weight="800" fill="#0A4039" text-anchor="middle">25</text>
+  <line x1="240" y1="206" x2="320" y2="206" stroke="#0A4039" stroke-width="3" stroke-linecap="round"/>
+  <text x="280" y="246" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="38" font-weight="800" fill="#0A4039" text-anchor="middle">100</text>
+  <rect x="380" y="130" width="140" height="140" rx="6" fill="#FFFFFF" stroke="#B9975B" stroke-width="3.5" filter="url(#sp2-sombra)"/>
+  <text x="450" y="214" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="42" font-weight="800" fill="#0A4039" text-anchor="middle">0,25</text>
+  <path d="M184 200 h18 m-8 -8 l8 8 l-8 8" fill="none" stroke="#0F5C51" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M354 200 h18 m-8 -8 l8 8 l-8 8" fill="none" stroke="#0F5C51" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="110" y="310" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="17" font-weight="600" fill="#2E5A53" text-anchor="middle">porcentaje</text>
+  <text x="280" y="310" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="17" font-weight="600" fill="#2E5A53" text-anchor="middle">÷ 100</text>
+  <text x="450" y="310" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="17" font-weight="600" fill="#2E5A53" text-anchor="middle">decimal</text>
+</svg>

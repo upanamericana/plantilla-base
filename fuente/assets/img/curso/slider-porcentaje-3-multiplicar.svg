@@ -1,0 +1,22 @@
+<!-- UP-001: figura de ejemplo del catálogo con la paleta de UP, sin el escalón de cuadros de Andina (D9). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400" role="img" aria-label="Una tarjeta blanca con la operación 40 por 0,25 igual a 10, con el resultado 10 destacado en un círculo dorado.">
+  <!-- Plantilla base · Slider de pasos · paso 3. Imagen sugerida: la operación con el resultado destacado. Único dorado: el resultado.
+       Familia: fondo verde claro degradado, piezas blancas con sombra, trazo verde, un solo dorado. -->
+  <defs>
+    <linearGradient id="sp3-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E4EEEB"/><stop offset="55%" stop-color="#ECF1EF"/><stop offset="100%" stop-color="#F6F8F7"/>
+    </linearGradient>
+    <filter id="sp3-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0A4039" flood-opacity="0.14"/>
+    </filter>
+    <g id="sp3-persona"><circle cx="0" cy="-11" r="7"/><path d="M-12 12 a12 12 0 0 1 24 0 v3 h-24z"/></g>
+  </defs>
+  <rect width="560" height="400" rx="6" fill="url(#sp3-fondo)"/>
+  <rect x="40" y="110" width="480" height="180" rx="6" fill="#FFFFFF" stroke="#0F5C51" stroke-width="2" filter="url(#sp3-sombra)"/>
+  <text x="76" y="220" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="52" font-weight="800" fill="#0A4039">40</text>
+  <text x="172" y="214" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="40" font-weight="600" fill="#3F7D74" text-anchor="middle">×</text>
+  <text x="200" y="220" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="52" font-weight="800" fill="#0A4039">0,25</text>
+  <text x="364" y="214" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="40" font-weight="600" fill="#3F7D74" text-anchor="middle">=</text>
+  <circle cx="434" cy="200" r="46" fill="#B9975B"/>
+  <text x="434" y="219" font-family="Seravek, 'Source Sans 3', system-ui, sans-serif" font-size="50" font-weight="800" fill="#0A4039" text-anchor="middle">10</text>
+</svg>

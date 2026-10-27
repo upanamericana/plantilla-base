@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 440" width="1200" height="440" role="img"
+     aria-label="Dos tarjetas unidas por una flecha. A la izquierda, una herramienta de IA reparte el mismo análisis, con su título y sus barras, a cuatro personas, una hoja para cada una. A la derecha, la única tarjeta enmarcada en dorado, con una sola persona en tres momentos: debajo de un globo con una pregunta; frente a tres análisis iguales, señalando el que está mal; y con una hoja en alto, sosteniendo su recomendación frente a otra persona que la cuestiona.">
+  <!-- Ilustración de marca · Posgrados Panamericana · plantilla-base, tema 2 (muestra de la familia)
+       Misma idea que la muestra provisional (D9 de UP-001), redibujada en la familia de UP (§1.7 y §1.4):
+       plana, geométrica, sin trazo en las figuras; ortogonal y diagonal, radios de 2 a 8 px; personas
+       sin rostro; sin texto dentro (la plantilla no tiene DI del que tomar rótulos).
+       Izquierda, lo que se volvió abundante: una herramienta de IA y el mismo análisis para cuatro personas.
+       Derecha, lo que se volvió escaso: una persona que pregunta, reconoce el análisis que está mal
+       (idéntico a los otros) y sostiene su recomendación ante quien la cuestiona.
+       Único dorado: el marco de la tarjeta del criterio. -->
+  <defs>
+    <linearGradient id="ilu-criterio-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#E4EEEB"/>
+      <stop offset="55%"  stop-color="#ECF1EF"/>
+      <stop offset="100%" stop-color="#F6F8F7"/>
+    </linearGradient>
+    <filter id="ilu-criterio-sombra" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0A4039" flood-opacity="0.14"/>
+    </filter>
+    <!-- Un análisis: título, una línea y unas barras que suben. Se ve convincente. -->
+    <g id="ilu-criterio-hoja">
+      <rect x="0" y="0" width="64" height="82" rx="4" fill="#CFE0DC"/>
+      <rect x="10" y="12" width="30" height="6" rx="2" fill="#0A4039"/>
+      <rect x="10" y="24" width="44" height="4" rx="2" fill="#3F7D74"/>
+      <rect x="12" y="52" width="9" height="18" rx="2" fill="#0F5C51" opacity=".55"/>
+      <rect x="27" y="44" width="9" height="26" rx="2" fill="#0F5C51" opacity=".78"/>
+      <rect x="42" y="36" width="9" height="34" rx="2" fill="#0F5C51"/>
+    </g>
+    <!-- Una persona sin rostro: cabeza y torso trapezoidal -->
+    <g id="ilu-criterio-persona">
+      <circle cx="0" cy="0" r="14"/>
+      <polygon points="-26,72 -20,22 20,22 26,72"/>
+    </g>
+    <g id="ilu-criterio-persona-chica">
+      <circle cx="0" cy="0" r="10"/>
+      <polygon points="-18,46 -14,16 14,16 18,46"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="440" rx="4" fill="url(#ilu-criterio-fondo)"/>
+
+  <!-- Las dos tarjetas. La del criterio va sobre su marco dorado. -->
+  <g filter="url(#ilu-criterio-sombra)">
+    <rect x="44" y="44" width="472" height="352" rx="6" fill="#FFFFFF"/>
+    <!-- ÚNICO DORADO: el marco del criterio, lo que la IA no volvió abundante -->
+    <rect x="590" y="44" width="566" height="352" rx="8" fill="#B9975B"/>
+  </g>
+  <rect x="597" y="51" width="552" height="338" rx="4" fill="#FFFFFF"/>
+
+  <!-- ══ Izquierda · la producción de análisis ══ -->
+  <!-- la herramienta de IA: ventana, respuesta y barra de pregunta -->
+  <rect x="200" y="76" width="160" height="92" rx="4" fill="#ECF1EF"/>
+  <path d="M204 76 H356 a4 4 0 0 1 4 4 V94 H200 V80 a4 4 0 0 1 4 -4 z" fill="#0F5C51"/>
+  <g fill="#FFFFFF">
+    <rect x="210" y="82" width="6" height="6" rx="1"/>
+    <rect x="222" y="82" width="6" height="6" rx="1"/>
+    <rect x="234" y="82" width="6" height="6" rx="1"/>
+  </g>
+  <rect x="214" y="104" width="104" height="6" rx="2" fill="#3F7D74"/>
+  <rect x="214" y="116" width="76"  height="6" rx="2" fill="#3F7D74" opacity=".6"/>
+  <rect x="212" y="136" width="136" height="20" rx="2" fill="#FFFFFF"/>
+  <rect x="222" y="141" width="3" height="10" fill="#0A4039"/>
+  <polygon points="330,140 342,146 330,152" fill="#0F5C51"/>
+
+  <!-- de la herramienta, el mismo análisis para cada quien: tramos rectos y la punta hacia abajo -->
+  <g fill="none" stroke="#3F7D74" stroke-width="3" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M280 168 V186"/>
+    <path d="M100 202 V186 H460 V202"/>
+    <path d="M220 186 V202"/>
+    <path d="M340 186 V202"/>
+  </g>
+  <g fill="#3F7D74">
+    <polygon points="93,200 107,200 100,212"/>
+    <polygon points="213,200 227,200 220,212"/>
+    <polygon points="333,200 347,200 340,212"/>
+    <polygon points="453,200 467,200 460,212"/>
+  </g>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" x="68"  y="220"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" x="188" y="220"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" x="308" y="220"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" x="428" y="220"/>
+  <!-- cualquier persona: cuatro, cada una con su copia -->
+  <g fill="#3F7D74">
+    <use href="#ilu-criterio-persona-chica" xlink:href="#ilu-criterio-persona-chica" x="100" y="328"/>
+    <use href="#ilu-criterio-persona-chica" xlink:href="#ilu-criterio-persona-chica" x="220" y="328"/>
+    <use href="#ilu-criterio-persona-chica" xlink:href="#ilu-criterio-persona-chica" x="340" y="328"/>
+    <use href="#ilu-criterio-persona-chica" xlink:href="#ilu-criterio-persona-chica" x="460" y="328"/>
+  </g>
+
+  <!-- Los análisis llegan a quien tiene que usarlos: la punta se detiene antes del marco -->
+  <path d="M528 220 H566" fill="none" stroke="#0F5C51" stroke-width="3" stroke-linecap="butt"/>
+  <polygon points="564,212 578,220 564,228" fill="#0F5C51"/>
+
+  <!-- ══ Derecha · el criterio para usarlos bien: una persona, tres momentos ══ -->
+
+  <!-- 1 · decidir qué preguntar -->
+  <rect x="640" y="92" width="96" height="84" rx="6" fill="#0F5C51"/>
+  <polygon points="660,175 660,204 684,175" fill="#0F5C51"/>
+  <path d="M676 124 V114 H700 V136 H688 V148" fill="none" stroke="#FFFFFF" stroke-width="7"
+        stroke-linecap="butt" stroke-linejoin="miter"/>
+  <rect x="684.5" y="155" width="7" height="7" fill="#FFFFFF"/>
+  <use href="#ilu-criterio-persona" xlink:href="#ilu-criterio-persona" x="688" y="276" fill="#0F5C51"/>
+
+  <!-- 2 · reconocer cuándo un análisis está mal, aunque se vea convincente -->
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" transform="translate(790 112) scale(.8)"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" transform="translate(850 112) scale(.8)"/>
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" transform="translate(910 112) scale(.8)"/>
+  <!-- el mismo análisis, señalado: está mal -->
+  <circle cx="960" cy="112" r="13" fill="#0A4039"/>
+  <path d="M954 106 L966 118 M966 106 L954 118" stroke="#FFFFFF" stroke-width="3" stroke-linecap="butt"/>
+  <!-- el brazo que señala, en diagonal -->
+  <polygon points="886,299 897,299 940,192 930,188" fill="#0F5C51"/>
+  <use href="#ilu-criterio-persona" xlink:href="#ilu-criterio-persona" x="873" y="276" fill="#0F5C51"/>
+
+  <!-- 3 · sostener una recomendación frente a alguien que va a cuestionarla -->
+  <use href="#ilu-criterio-hoja" xlink:href="#ilu-criterio-hoja" transform="translate(1010 150) scale(.8)"/>
+  <polygon points="1015,299 1025,299 1040,218 1030,218" fill="#0F5C51"/>
+  <use href="#ilu-criterio-persona" xlink:href="#ilu-criterio-persona" x="1004" y="276" fill="#0F5C51"/>
+  <!-- quien la cuestiona -->
+  <rect x="1080" y="96" width="52" height="46" rx="4" fill="#5F6663"/>
+  <polygon points="1094,141 1098,162 1110,141" fill="#5F6663"/>
+  <path d="M1099 113 V107 H1113 V121 H1106 V128" fill="none" stroke="#FFFFFF" stroke-width="4.5"
+        stroke-linecap="butt" stroke-linejoin="miter"/>
+  <rect x="1103.75" y="132" width="4.5" height="4.5" fill="#FFFFFF"/>
+  <use href="#ilu-criterio-persona" xlink:href="#ilu-criterio-persona" x="1106" y="276" fill="#5F6663"/>
+</svg>
