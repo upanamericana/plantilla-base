@@ -32,6 +32,9 @@ html:root {
   --c-dorado-tinta:  #7A5C2B;   /* dorado como texto sobre claro: 6,19:1 sobre blanco */
   --c-dorado-claro:  #D9C9A3;   /* dorado como texto sobre verde: 4,81:1 */
   --c-dorado-palido: #F1EAD9;   /* superficie dorada muy clara para fichas y datos */
+  --c-dorado-hondo:  #8D6E39;   /* dorado bajo un número o un icono: 4,63:1 con el marfil (UP-002) */
+  --c-marfil:        #FFFCF5;   /* tinta de los números e iconos sobre oro o verde (ronda 2026-10-27);
+                                   sobre #B9975B daría 2,68:1, por eso va sobre el dorado hondo */
   --c-crema:         #F7F4EE;   /* crema de marca (tono sobre tono en la portada); ya no es el fondo de trabajo */
   --c-lino:          #ECF1EF;   /* superficie apagada, en la familia fría del fondo (ronda 2026-10-15; antes #EFEBE2) */
 

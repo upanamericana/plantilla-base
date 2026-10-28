@@ -1794,15 +1794,7 @@ html:not([data-version="oscura"]) .ova-carrusel__slide::after {
   pointer-events: none;
 }
 
-/* Pestañas: la barra en verde hondo; la activa en blanco con un filo dorado */
-html:not([data-version="oscura"]) .ova-tabs__nav { background: var(--grad-up); border-bottom-color: transparent; }
-html:not([data-version="oscura"]) .ova-tabs__btn { color: rgba(255, 255, 255, .82); }
-html:not([data-version="oscura"]) .ova-tabs__btn:hover { color: #FFFFFF; }
-html:not([data-version="oscura"]) .ova-tabs__btn.is-active {
-  background: #FFFFFF;
-  color: var(--c-acento);
-  box-shadow: inset 0 -3px 0 var(--c-dorado);
-}
+/* Pestañas: en línea desde la ronda del 2026-10-27 (UP-002, al final del archivo). */
 
 /* El botón que abre una ventana: verde hondo relleno */
 html:not([data-version="oscura"]) .ova-btn[data-ova-modal-open] {
@@ -2550,18 +2542,8 @@ html:not([data-version="oscura"]) .ova-acordeon--numerado .ova-acordeon__item:no
 .ova-ruta--iconos { --ova-ruta-tenue: var(--c-dorado); }
 .ova-mosaico { --ova-realce: var(--c-dorado); }
 
-/* Pestañas (§3, contraste entre interactivos): también las de píldora y las verticales, con lo que se
-   toca en verde hondo y lo activo en blanco con filo dorado. En celular, la barra de línea se parte
-   en filas en vez de esconder pestañas. */
-html:not([data-version="oscura"]) .ova-tabs.ova-tabs--pildoras .ova-tabs__nav { background: var(--grad-up); border-bottom-color: transparent; }
-html:not([data-version="oscura"]) .ova-tabs.ova-tabs--pildoras .ova-tabs__btn { color: rgba(255, 255, 255, .82); }
-html:not([data-version="oscura"]) .ova-tabs.ova-tabs--pildoras .ova-tabs__btn:not(.is-active):hover { color: #FFFFFF; background: rgba(255, 255, 255, .08); }
-html:not([data-version="oscura"]) .ova-tabs.ova-tabs--pildoras .ova-tabs__btn.is-active { background: #FFFFFF; color: var(--c-acento); box-shadow: inset 0 -3px 0 var(--c-dorado); }
-html:not([data-version="oscura"]) .ova-tabs.ova-tabs--vertical .ova-tabs__nav { background: none; }
-html:not([data-version="oscura"]) .ova-tabs.ova-tabs--vertical .ova-tabs__btn { background: var(--grad-up); border-color: transparent; color: #FFFFFF; border-radius: var(--r-md); }
-html:not([data-version="oscura"]) .ova-tabs.ova-tabs--vertical .ova-tabs__btn:not(.is-active):hover { background: var(--grad-up); color: #FFFFFF; border-color: transparent; filter: brightness(1.12); }
-html:not([data-version="oscura"]) .ova-tabs.ova-tabs--vertical .ova-tabs__btn.is-active { background: #FFFFFF; border-color: var(--c-dorado); color: var(--c-acento); box-shadow: inset 3px 0 0 var(--c-dorado), var(--shadow-sm); }
-html:not([data-version="oscura"]) .ova-tabs.ova-tabs--vertical .ova-tabs__btn.is-active::after { border-left-color: var(--c-dorado); }
+/* Pestañas: en línea desde la ronda del 2026-10-27 (UP-002, al final del archivo). En celular, la
+   barra de línea se parte en filas en vez de esconder pestañas. */
 @media (max-width: 600px) { .ova-tabs:not(.ova-tabs--vertical) .ova-tabs__nav { flex-wrap: wrap; } }
 
 /* «Cómo va en el Word» es ayuda del catálogo, no contenido: en contorno, para que no compita con
@@ -2590,3 +2572,148 @@ html:not([data-version="oscura"]) .ova-catalogo__acciones .ova-btn[data-ova-moda
 :is(.ova-ciclo__escalera, .up-ciclo__escalera) text,
 .ova-sidebar__menu-item .num,
 .ova-bloque li .n { font-family: var(--font-body); }
+
+/* =========================================================
+   RONDA DEL CLIENTE · 2026-10-27 · textos, números y componentes (UP-002)
+   ========================================================= */
+
+/* Lead en Seravek Regular: en 300 se leía débil (fila A). */
+.ova-screen__lead { font-weight: 400; }
+
+/* Tablas (fila B, D9): la fila de encabezado y los rótulos de fila de la tabla combinada en Seravek
+   Bold a 15 px y centrados; el cuerpo en Seravek Regular a 15 px y a la izquierda. La primera columna
+   de una tabla simple es cuerpo: su peso lo pone el Word. */
+.ova-tabla th, .ova-tabla--combinada td[rowspan] {
+  font-family: var(--font-body); font-weight: 700; font-size: .9375rem; letter-spacing: 0; text-align: center;
+}
+.ova-tabla td { font-size: .9375rem; }
+
+/* Números e iconos sobre oro (fila C, D7, D8): en marfil y Seravek Bold sobre el dorado hondo, que da
+   4,63:1 (el marfil sobre #B9975B daba 2,68:1 y el verde hondo, 4,23:1). Solo bajo el número o el icono:
+   líneas, filetes, halos y el Tahalí siguen en el dorado de la marca. */
+.ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__num,
+.ova-ruta--iconos .ova-ruta__num,
+.ova-tabs--pasos .ova-tabs__btn.is-active .ova-tabs__num,
+.ova-hotspot:hover .ova-hotspot__dot, .ova-hotspot.is-open .ova-hotspot__dot {
+  background: var(--c-dorado-hondo); color: var(--c-marfil); font-family: var(--font-body); font-weight: 700;
+}
+/* La cima del cuarto escalón (la escalera y el proceso escalonado del catálogo comparten las variables). */
+.ova-ciclo--escalonado, .ova-escalones { --ova-escalon-4: var(--c-dorado-hondo); --ova-escalon-tinta-4: var(--c-marfil); }
+/* Listado de pasos vertical: el paso activo pinta su círculo de verde; la tinta dorada de §1.1 quedaba
+   en 1,27:1 sobre él. El número pasa a marfil (7,68:1). */
+:root .ova-stepper--lista .ova-step:hover .ova-step__num span { color: var(--c-marfil); -webkit-text-fill-color: var(--c-marfil); }
+/* Números del proceso escalonado, de la cronología y del acordeón numerado cerrado en Seravek (fila D:
+   la regla del 2026-10-26 no los alcanzó; el motor los pone en la serif con más especificidad). */
+.ova-escalones__cima, .ova-cronologia__punto,
+.ova-acordeon--numerado .ova-acordeon__num { font-family: var(--font-body); }
+.ova-escalones__cima { font-weight: 700; }
+
+/* Pestañas en línea (fila E, D11), a la manera de Andina con la paleta de UP: sin la franja verde,
+   un filete bajo la fila, la activa subrayada en dorado y los títulos en Seravek. Vale para «Pestañas»
+   (píldoras), «Pestañas - línea» y las verticales (el filete va a la izquierda), en las dos versiones.
+   Las pestañas de pasos conservan su forma y toman la tipografía. */
+.ova-tabs__btn, .ova-tabs__btn strong { font-family: var(--font-body); }
+.ova-tabs--pasos .ova-tabs__num { font-family: var(--font-body); font-weight: 700; }
+.ova-tabs--pasos .ova-tabs__btn.is-active .ova-tabs__num { border-color: var(--c-dorado-hondo); }
+html .ova-tabs.ova-tabs--pasos .ova-tabs__btn { font-size: .95rem; }   /* el mismo cuerpo que las de línea */
+html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) { padding: 0; }
+html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__nav {
+  background: none; padding: 0 24px; gap: 0; border-bottom: 1px solid var(--border-c);
+}
+html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__btn {
+  position: relative; margin: 0 0 -1px; padding: 16px 18px; border-radius: 0; background: none; box-shadow: none;
+  font-weight: 500; font-size: .95rem; line-height: 1.3; color: color-mix(in srgb, var(--text-pri) 80%, transparent);
+  transition: color .2s, box-shadow .2s;
+}
+html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__btn::after { display: none; }
+html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__btn + .ova-tabs__btn::before {
+  content: ''; display: block; position: absolute; left: 0; top: 30%; bottom: 30%; width: 1px; background: var(--border-c);
+}
+html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__btn:not(.is-active):hover {
+  color: var(--text-head); background: none; box-shadow: inset 0 -3px 0 color-mix(in srgb, var(--c-dorado) 40%, transparent);
+}
+html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__btn.is-active {
+  background: none; color: var(--text-head); font-weight: 700; box-shadow: inset 0 -3px 0 var(--c-dorado);
+}
+/* La inactiva en el gris de las de pasos (5,89:1), para que se distinga de la activa: los rótulos
+   vienen en negrilla del Word y el peso solo no las separa (revisión del diagramador). */
+html .ova-tabs:not(.ova-tabs--pasos) .ova-tabs__btn:not(.is-active) { color: var(--text-mut); }
+html .ova-tabs:not(.ova-tabs--pasos) .ova-tabs__btn:not(.is-active):hover { color: var(--text-head); }
+html .ova-tabs:not(.ova-tabs--pasos) .ova-tabs__btn strong { color: inherit; }
+html .ova-tabs.ova-tabs--vertical .ova-tabs__nav { gap: 0; border-left: 1px solid var(--border-c); }
+html .ova-tabs.ova-tabs--vertical .ova-tabs__btn {
+  margin-left: -1px; padding: 14px 18px; border: 0; border-radius: 0; background: none; box-shadow: none; filter: none;
+  font-weight: 500; color: color-mix(in srgb, var(--text-pri) 80%, transparent);
+}
+html .ova-tabs.ova-tabs--vertical .ova-tabs__btn::after { display: none; }
+html .ova-tabs.ova-tabs--vertical .ova-tabs__btn:not(.is-active):hover {
+  background: none; color: var(--text-head); transform: none; filter: none;
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--c-dorado) 40%, transparent);
+}
+html .ova-tabs.ova-tabs--vertical .ova-tabs__btn.is-active {
+  background: none; color: var(--text-head); font-weight: 700; box-shadow: inset 3px 0 0 var(--c-dorado);
+}
+@media (max-width: 720px) {
+  html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__nav { padding: 0 8px; }
+  html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__btn + .ova-tabs__btn::before { display: none; }
+  html .ova-tabs.ova-tabs--vertical .ova-tabs__nav { border-left: 0; border-bottom: 1px solid var(--border-c); gap: 0; }
+  html .ova-tabs.ova-tabs--vertical .ova-tabs__btn { margin: 0 0 -1px; }
+  html .ova-tabs.ova-tabs--vertical .ova-tabs__btn.is-active { box-shadow: inset 0 -3px 0 var(--c-dorado); }
+  html .ova-tabs.ova-tabs--vertical .ova-tabs__btn:not(.is-active):hover { box-shadow: inset 0 -3px 0 color-mix(in srgb, var(--c-dorado) 40%, transparent); }
+}
+
+@media (max-width: 600px) {
+  /* En celular, la fila se apila en una columna con el filete a la izquierda, como la vertical: partida
+     en varias filas, el subrayado quedaba lejos del filete (revisión del diagramador). */
+  html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__nav {
+    flex-direction: column; flex-wrap: nowrap; padding: 0; border-bottom: 0; border-left: 1px solid var(--border-c); margin: 16px 16px 0;
+  }
+  html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__btn { justify-content: flex-start; text-align: left; margin: 0 0 0 -1px; padding: 12px 16px; white-space: normal; }
+  html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__btn.is-active { box-shadow: inset 3px 0 0 var(--c-dorado); }
+  html .ova-tabs:not(.ova-tabs--pasos, .ova-tabs--vertical) .ova-tabs__btn:not(.is-active):hover { box-shadow: inset 3px 0 0 color-mix(in srgb, var(--c-dorado) 40%, transparent); }
+}
+
+/* Bloque de código sobre blanco (fila 1). */
+.ova-codigo { --ova-codigo-fondo: var(--bg-surface); --ova-codigo-copiar-borde: rgba(255, 255, 255, .4); }
+
+/* Ruta de inicio a meta (fila 3): inicio y meta del mismo tamaño y color que los numerados, para que
+   queden en el eje de la línea, con un aro dorado que los marca como extremos; al pasar el mouse no
+   cambian de color (no son botones). A partir de 721 px, el ancho de cada texto se calcula desde la
+   distancia entre paradas (un tercio del contenedor), para que el de la esquina no se monte sobre el
+   del paso vecino. */
+.ova-trayecto { container-type: inline-size; }
+.ova-trayecto__parada--meta .ova-trayecto__marca { width: var(--ova-marca); height: var(--ova-marca); }
+.ova-trayecto__parada:is(.ova-trayecto__parada--inicio, .ova-trayecto__parada--meta) .ova-trayecto__marca {
+  background: var(--c-acento); box-shadow: inset 0 0 0 3px var(--c-dorado), 0 0 0 6px var(--bg-app);
+}
+.ova-trayecto__parada:hover .ova-trayecto__marca { background: var(--c-acento); }
+@media (min-width: 721px) {
+  .ova-trayecto__parada { width: min(220px, 33.333cqw - 24px); margin-left: calc(min(220px, 33.333cqw - 24px) / -2); }
+  .ova-trayecto__fila:not(:last-child) .ova-trayecto__parada:nth-child(3) .ova-trayecto__texto {
+    width: min(190px, 33.333cqw - min(220px, 33.333cqw - 24px) / 2 - 40px); top: calc(var(--ova-marca) + 14px);
+  }
+}
+
+/* Cronograma (fila 5): el último hito con el mismo aro que los demás; no es un botón. */
+.ova-cronograma__hito:last-child::after { background: var(--bg-surface); border-color: var(--ova-realce, var(--c-info)); }
+
+/* Tarjeta con cifra destacada sola (fila 6): centrada y más compacta, con menos aire entre la cifra,
+   el texto y la retícula. Sola es la que va directo en la sección (no en una grilla). */
+:where(.up-seccion, .up-bloque, .ova-screen) > .ova-cifra {
+  max-width: 440px; margin-inline: auto; padding: clamp(26px, 3.4vw, 36px) clamp(24px, 3vw, 34px) 24px;
+}
+:where(.up-seccion, .up-bloque, .ova-screen) > .ova-cifra .ova-cifra__texto { margin: 14px 0 20px !important; }
+/* La interlínea del párrafo de la piel le daba 1,68 a la cifra: 80 px de aire sobre el texto. */
+:where(.up-seccion, .up-bloque, .ova-screen) > .ova-cifra .ova-cifra__num { line-height: 1; font-size: clamp(4.2rem, 9vw, 6.2rem); }
+:where(.up-seccion, .up-bloque, .ova-screen) > .ova-cifra .ova-cifra__reticula { max-width: 280px; gap: 6px; }
+
+/* Globo del hotspot (fila 7): el título en dorado claro sobre el verde hondo (4,81:1). */
+.ova-hotspot__tooltip strong { color: var(--c-dorado-claro); }
+
+/* Acordeón numerado (fila 2): el número dorado y la cabecera clara pasan al ítem nuevo en el acto,
+   pero el cuerpo del que se cierra tardaba 0,4 s en plegarse con su texto a la vista, bajo una
+   cabecera ya verde hondo: parecía abierto el anterior. El texto del que se cierra se apaga de una vez
+   (0,12 s); el del que se abre aparece cuando su cuerpo ya se está desplegando. */
+.ova-acordeon--numerado .ova-acordeon__item:not(.is-open) .ova-acordeon__body-inner { opacity: 0; transition: opacity .12s ease, padding-bottom .4s ease; }
+.ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__body-inner { opacity: 1; transition: opacity .25s ease .12s, padding-bottom .4s ease; }
+@media (prefers-reduced-motion: reduce) { .ova-acordeon--numerado .ova-acordeon__body-inner { transition: none !important; } }
