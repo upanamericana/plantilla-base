@@ -337,11 +337,13 @@ h1, h2, h3, h4, .ova-screen__title, .ova-quiz__question, .ova-acordeon__title, .
    en la misma frase ninguna destaca. ----------------------------------- */
 .up-suave { font-weight: 300; }
 
-/* Lead: más grande y más ligero, para que la entrada respire */
+/* Lead: más grande, para que la entrada respire; al mismo ancho que los párrafos (el motor lo cortaba a
+   720 px y se veía desparejo con el texto que sigue; UP-003, fila 3, D4). El peso, 400 desde la ronda
+   del 2026-10-27 (UP-002), va más abajo; aquí no se declara. */
 .ova-screen__lead {
-  font-weight: 300;
   font-size: 1.22rem;
   line-height: 1.6;
+  max-width: none;
   color: color-mix(in srgb, var(--text-pri) 88%, transparent);
 }
 
@@ -2323,20 +2325,21 @@ html:not([data-version="oscura"]) .up-cifras .up-fuente em { color: inherit; }
     .ova-audio__play, .ova-beforeafter__handle, .ova-btn, .ova-hotspot__pulse) { animation: none !important; }
 }
 
-/* La ilustración explicativa del catálogo lleva el guiño de la de las demos: el Tahalí dorado
-   pequeño en la esquina (arriba si hay pie). */
+/* La ilustración explicativa del catálogo lleva el guiño de la de las demos: el Tahalí dorado pequeño
+   (18 × 28 px) al final del renglón del pie, fuera de la imagen (UP-003, fila C, D5: en la esquina de la
+   imagen pisaba el dibujo 26 × 28 px a los dos anchos y cruzaba el marco junto a la lupa). El pie reserva
+   su espacio a la derecha y va en cursiva, como leyenda, con su cuerpo de hoy (D10). Sin pie, el Tahalí
+   baja a una banda bajo la imagen. La lupa de ampliar (catalogo.css, ≤ 720 px) queda arriba. */
 .ova-ilustracion { overflow: visible; }
 .ova-ilustracion img { border-radius: var(--r-md); }
+.ova-ilustracion figcaption { font-style: italic; padding-right: 34px; }
+.ova-ilustracion:not(:has(figcaption)) { padding-bottom: 34px; }
 .ova-ilustracion::after {
-  content: ''; position: absolute; right: 18px; bottom: -12px;
-  width: 26px; height: 40px;
+  content: ''; position: absolute; right: 4px; bottom: 0;
+  width: 18px; height: 28px;
   background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
   pointer-events: none;
 }
-.ova-ilustracion:has(figcaption)::after { bottom: auto; top: -12px; }
-/* en celular aparece la lupa de ampliar (catalogo.css, ≤ 720 px) en la misma esquina: el Tahalí
-   se corre a su izquierda (UP-001 T7) */
-@media (max-width: 720px) { .ova-ilustracion:has(.ova-ampliar)::after { right: 58px; } }
 
 /* Las variables de marca de las piezas de texto (catalogo.css, «TEXTO Y ÉNFASIS»). */
 html:not([data-version="oscura"]) {
@@ -2379,14 +2382,17 @@ html:not([data-version="oscura"]) { --ova-subtitulo-vineta-2: var(--c-acento); }
 .ova-cita { --ova-cita-comilla: var(--c-dorado); --ova-cita-luz: var(--c-dorado-claro); }
 .ova-cita--neutra { --ova-cita-fondo: var(--c-lino); --ova-cita-comilla: var(--c-dorado); }
 .up-sub + .ova-cita--tipo1 { margin-top: 40px; }
-.ova-cita { --ova-cita-bloque: var(--c-dorado-palido); }
-/* Cita tipo 3: el panel del catálogo lleva el Tahalí dorado asomando por su esquina inferior
-   derecha, como la apertura de unidad (en Andina, sus dos cuadros). */
-.ova-cita--tipo3::before {
-  content: ''; position: absolute; right: 28px; bottom: 0; width: 40px; height: 62px; z-index: 0;
+/* Cita tipo 3 en UP: frase, comillas, autor y Tahalí, sin el bloque de color del catálogo (flotaba
+   vacío a la derecha de la frase; UP-003, fila 1, D6). La figura se ciñe a su frase (máx. 34ch, del
+   catálogo) y el Tahalí, 18 × 28 px como el de la ilustración, remata el renglón del autor: en línea,
+   a 8 px del final de su texto (antes, 40 × 62 px desde el borde, le pisaba 40 × 22 px; anclado al
+   borde derecho de la figura quedaba a 320 px del autor a 1440, en medio de nada: post-auditoría). */
+.ova-cita--tipo3 { width: fit-content; max-width: 100%; }
+.ova-cita--tipo3::after { content: none; }
+.ova-cita--tipo3 figcaption::after {
+  content: ''; display: inline-block; vertical-align: middle; margin-left: 8px; width: 18px; height: 28px;
   background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
 }
-@media (max-width: 720px) { .ova-cita--tipo3::before { right: 16px; width: 30px; height: 46px; } }
 
 /* Banner del catálogo: el respiro de UP. Verde hondo con degradado y los arcos al 7 %, la frase
    en Laurentian itálica blanca y la negrilla en dorado claro (4,81:1); el claro, en lino con la
@@ -2478,7 +2484,10 @@ html:not([data-version="oscura"]) .ova-carrusel--slide:not(.ova-carrusel--fondo)
 html:not([data-version="oscura"]) .ova-acordeon--numerado .ova-acordeon__item,
 html:not([data-version="oscura"]) .ova-acordeon--numerado .ova-acordeon__item.is-open { background: none; box-shadow: none; }
 html:not([data-version="oscura"]) .ova-acordeon--numerado .ova-acordeon__item:not(.is-open) .ova-acordeon__head { background: var(--grad-up); }
-html:not([data-version="oscura"]) .ova-acordeon--numerado .ova-acordeon__item:not(.is-open) .ova-acordeon__head:hover { background: var(--grad-up); filter: brightness(1.12); }
+/* El hover de la cabecera se aclara por color, con una capa blanca al 12 % sobre el degradado: con `filter`
+   la cabecera se volvía el contenedor del número (absoluto dentro del botón) y lo desplazaba 62 px sobre
+   el título al pasar el mouse (UP-003, fila 2, D11). */
+html:not([data-version="oscura"]) .ova-acordeon--numerado .ova-acordeon__item:not(.is-open) .ova-acordeon__head:hover { background: linear-gradient(rgba(255, 255, 255, .12), rgba(255, 255, 255, .12)), var(--grad-up); }
 .ova-acordeon--numerado .ova-acordeon__num { background: var(--c-lino); border-radius: var(--r-md); }
 .ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__head,
 .ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__body { border-color: var(--c-dorado); }
@@ -2510,17 +2519,28 @@ html:not([data-version="oscura"]) .ova-acordeon--numerado .ova-acordeon__item:no
    dejaba una columna de 36 px para el texto). */
 @media (max-width: 720px) { .ova-destacado--sin-icono { grid-template-columns: minmax(0, 1fr); } }
 
-/* Contraste (§1.1, §1.7): «Para reflexionar» con el título en tinta dorada y el icono en verde hondo
-   sobre su círculo dorado; los iconos de los destacados oscuros en dorado claro sobre verde. */
+/* Contraste (§1.1, §1.7): «Para reflexionar» con el título en tinta dorada; su icono va en marfil sobre
+   el dorado hondo con la regla de números e iconos sobre oro (UP-003, fila A: en verde hondo sobre el
+   dorado daba 4,23:1). Los iconos de los destacados oscuros van en marfil sobre el halo blanco al 14 %
+   que llevan sobre el verde: 5,41:1 (en dorado claro daban 3,40:1; sobre el verde sin halo, 4,81, y
+   subir el halo los baja más: post-auditoría de UP-003). El tono de «alerta» baja a un naranja hondo
+   que cumple en los dos usos: el título (Laurentian 700 a 16,8 px) va en el tono sobre su tinte al 8 %
+   y el icono en blanco sobre el tono. Con #C2620E daban 3,76 y 4,16:1; con #AB560C, 4,38 y 5,16 (el
+   título seguía bajo 4,5); con #9E4F0B, 5,24 y 5,87:1 (UP-003, D9 y post-auditoría). El título y el
+   fondo de la tarjeta toman el mismo tono, como en el catálogo. */
 .ova-destacado--reflexion .ova-destacado__titulo { color: var(--c-dorado-tinta); }
-.ova-destacado--reflexion .ova-destacado__icono { color: var(--c-deep); }
-.ova-destacados--oscuro { --ova-oscuro-icono: rgba(255, 255, 255, .14); --ova-oscuro-tinta: var(--c-dorado-claro); }
+.ova-destacado--alerta { --ova-tono-alerta: #9E4F0B; }
+.ova-destacados--oscuro { --ova-oscuro-icono: rgba(255, 255, 255, .14); --ova-oscuro-tinta: var(--c-marfil); }
 :root:not([data-version="oscura"]) .ova-stepper--lista .ova-step__num span { color: var(--c-dorado-tinta); -webkit-text-fill-color: var(--c-dorado-tinta); background: none; }
 .ova-escena__num { color: var(--c-info); }
 .ova-giro__frente :is(.ova-giro__num, .ova-giro__pista) { color: var(--c-dorado-claro); }
 .ova-cifra--clara strong { color: var(--text-head); }
 
 /* Forma (§1.4): radios de 2 a 8 px y botones rectangulares. */
+/* Toda imagen dentro de una figura toma el radio de la piel, igual que su marco: el motor recorta la del
+   slider de pasos a 14 px dentro de un marco de 4 px y dejaba una cuña blanca en cada esquina con los SVG
+   de fondo (UP-003, fila D, D8). */
+.ova-figura img, .ova-tabs--pasos .ova-tabs__figura img { border-radius: var(--r-md); }
 .ova-destacado { border-radius: var(--r-xl); }
 .ova-destacado--sin-icono { border-radius: 0 var(--r-xl) var(--r-xl) 0; }
 .ova-descargable--imagen { border-radius: var(--r-xl); }
@@ -2593,6 +2613,7 @@ html:not([data-version="oscura"]) .ova-catalogo__acciones .ova-btn[data-ova-moda
    líneas, filetes, halos y el Tahalí siguen en el dorado de la marca. */
 .ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__num,
 .ova-ruta--iconos .ova-ruta__num,
+.ova-destacado--reflexion .ova-destacado__icono,
 .ova-tabs--pasos .ova-tabs__btn.is-active .ova-tabs__num,
 .ova-hotspot:hover .ova-hotspot__dot, .ova-hotspot.is-open .ova-hotspot__dot {
   background: var(--c-dorado-hondo); color: var(--c-marfil); font-family: var(--font-body); font-weight: 700;
@@ -2675,6 +2696,10 @@ html .ova-tabs.ova-tabs--vertical .ova-tabs__btn.is-active {
 
 /* Bloque de código sobre blanco (fila 1). */
 .ova-codigo { --ova-codigo-fondo: var(--bg-surface); --ova-codigo-copiar-borde: rgba(255, 255, 255, .4); }
+/* El código a .8rem (12,8 px) a los dos anchos, con la interlínea de 1,65 del catálogo: a .88rem en
+   Menlo o Consolas (JetBrains Mono no se carga) se veía grande junto al rótulo de la cabecera, sobre todo
+   en celular (UP-003, fila E, D7). */
+.ova-codigo pre { font-size: .8rem; }
 
 /* Ruta de inicio a meta (fila 3): inicio y meta del mismo tamaño y color que los numerados, para que
    queden en el eje de la línea, con un aro dorado que los marca como extremos; al pasar el mouse no
