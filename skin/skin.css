@@ -1700,14 +1700,14 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 
 /* =========================================================
    Menú y barra superior más limpios (decisión del arquitecto, ronda del 2026-10-15)
-   - «Inicio» sale del menú lateral: la portada se alcanza con el botón de la casa
-     de la barra superior.
+   - «Inicio» volvió al menú lateral, como en Andina, a pedido del cliente (ronda del
+     2026-11-03, fila A); la regla que lo escondía se quitó. La portada se alcanza también
+     con el botón de la casa de la barra superior.
    - Sin el contador «02 / 06» del breadcrumb.
    - La Introducción va sola en el menú, sin sus secciones ancladas (en el temario
      siguen listadas). El enlace de una sección es «#/introduccion/<ancla>» en la
      SPA e «introduccion.html#<ancla>» en multipágina.
    ========================================================= */
-.ova-sidebar__menu-item[data-id="portada"] { display: none; }
 .ova-breadcrumb .step { display: none; }
 .ova-sidebar__menu-item[data-tipo="seccion"]:is([href^="#/introduccion/"], [href^="introduccion.html#"]) { display: none; }
 
@@ -2325,21 +2325,14 @@ html:not([data-version="oscura"]) .up-cifras .up-fuente em { color: inherit; }
     .ova-audio__play, .ova-beforeafter__handle, .ova-btn, .ova-hotspot__pulse) { animation: none !important; }
 }
 
-/* La ilustración explicativa del catálogo lleva el guiño de la de las demos: el Tahalí dorado pequeño
-   (18 × 28 px) al final del renglón del pie, fuera de la imagen (UP-003, fila C, D5: en la esquina de la
-   imagen pisaba el dibujo 26 × 28 px a los dos anchos y cruzaba el marco junto a la lupa). El pie reserva
-   su espacio a la derecha y va en cursiva, como leyenda, con su cuerpo de hoy (D10). Sin pie, el Tahalí
-   baja a una banda bajo la imagen. La lupa de ampliar (catalogo.css, ≤ 720 px) queda arriba. */
+/* La ilustración explicativa del catálogo: la imagen con el radio de la piel y el pie en cursiva, como
+   leyenda, con su cuerpo de hoy (UP-003, fila C, D5 y D10). El Tahalí dorado que iba en la esquina del
+   pie (18 × 28 px, fuera de la imagen) se quitó en la ronda del 2026-11-03 (lámina 2, fila 3): el cliente
+   lo leyó como un decorativo que «se coló». El Tahalí sigue donde se lee como marca: eyebrow, títulos de
+   sección y portada. La lupa de ampliar (catalogo.css, ≤ 720 px) queda arriba. */
 .ova-ilustracion { overflow: visible; }
 .ova-ilustracion img { border-radius: var(--r-md); }
-.ova-ilustracion figcaption { font-style: italic; padding-right: 34px; }
-.ova-ilustracion:not(:has(figcaption)) { padding-bottom: 34px; }
-.ova-ilustracion::after {
-  content: ''; position: absolute; right: 4px; bottom: 0;
-  width: 18px; height: 28px;
-  background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
-  pointer-events: none;
-}
+.ova-ilustracion figcaption { font-style: italic; }
 
 /* Las variables de marca de las piezas de texto (catalogo.css, «TEXTO Y ÉNFASIS»). */
 html:not([data-version="oscura"]) {
@@ -2382,17 +2375,12 @@ html:not([data-version="oscura"]) { --ova-subtitulo-vineta-2: var(--c-acento); }
 .ova-cita { --ova-cita-comilla: var(--c-dorado); --ova-cita-luz: var(--c-dorado-claro); }
 .ova-cita--neutra { --ova-cita-fondo: var(--c-lino); --ova-cita-comilla: var(--c-dorado); }
 .up-sub + .ova-cita--tipo1 { margin-top: 40px; }
-/* Cita tipo 3 en UP: frase, comillas, autor y Tahalí, sin el bloque de color del catálogo (flotaba
-   vacío a la derecha de la frase; UP-003, fila 1, D6). La figura se ciñe a su frase (máx. 34ch, del
-   catálogo) y el Tahalí, 18 × 28 px como el de la ilustración, remata el renglón del autor: en línea,
-   a 8 px del final de su texto (antes, 40 × 62 px desde el borde, le pisaba 40 × 22 px; anclado al
-   borde derecho de la figura quedaba a 320 px del autor a 1440, en medio de nada: post-auditoría). */
+/* Cita tipo 3 en UP: frase, comillas y autor, sin el bloque de color del catálogo (flotaba vacío a la
+   derecha de la frase; UP-003, fila 1, D6). La figura se ciñe a su frase (máx. 34ch, del catálogo). El
+   Tahalí que remataba el renglón del autor (18 × 28 px) se quitó en la ronda del 2026-11-03 (lámina 2,
+   fila 3), igual que el de las ilustraciones. */
 .ova-cita--tipo3 { width: fit-content; max-width: 100%; }
 .ova-cita--tipo3::after { content: none; }
-.ova-cita--tipo3 figcaption::after {
-  content: ''; display: inline-block; vertical-align: middle; margin-left: 8px; width: 18px; height: 28px;
-  background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
-}
 
 /* Banner del catálogo: el respiro de UP. Verde hondo con degradado y los arcos al 7 %, la frase
    en Laurentian itálica blanca y la negrilla en dorado claro (4,81:1); el claro, en lino con la
@@ -2583,9 +2571,12 @@ html:not([data-version="oscura"]) .ova-catalogo__acciones .ova-btn[data-ova-moda
 
 /* Números protagonistas en Seravek (ronda del cliente del 2026-10-26): donde el número es lo principal
    (pasos, cifras, rutas, cronologías, escaleras, chips del menú), la sans le quita el peso visual que
-   tiene la serif. Va al final para ganarle a las reglas de la piel que los ponían en Laurentian. */
+   tiene la serif. Va al final para ganarle a las reglas de la piel que los ponían en Laurentian.
+   El punto interactivo (.ova-hotspot__dot) entra desde la ronda del 2026-11-03 (fila B): el motor lo
+   pone en --font-mono y la piel solo lo pasaba a Seravek al abrirse, así que el número cambiaba de
+   letra al pasar el puntero. */
 :is(.ova-acordeon__num, .ova-carrusel__num, .ova-ciclo__num, .ova-cifra__num, .ova-escena__num, .ova-giro__num,
-  .ova-indicador__num, .ova-infografia__num, .ova-kpi__value, .ova-numerada__num, .ova-orden__num, .ova-ruta__num,
+  .ova-hotspot__dot, .ova-indicador__num, .ova-infografia__num, .ova-kpi__value, .ova-numerada__num, .ova-orden__num, .ova-ruta__num,
   .ova-step__num, .ova-step-card__num, .ova-tabs__num, .ova-tarjeta__cifra, .ova-cronologia__anio,
   .ova-cronograma__fecha strong, .up-cifra__valor),
 .up-tarjetas-foto :is(.ova-step__num, .ova-infografia__num),
