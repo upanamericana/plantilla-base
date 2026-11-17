@@ -866,6 +866,10 @@ h1, h2, h3, h4, .ova-screen__title, .ova-quiz__question, .ova-acordeon__title, .
 .ova-quiz__feedback.is-wrong { background: color-mix(in srgb, var(--danger) 8%, var(--bg-surface)); }
 .ova-quiz__feedback.is-wrong::before { color: var(--danger); }
 
+/* Relacionar (KIT-016): el verde de la paleta se queda en 4,47:1 en el texto de la marca «✓ Correcta» sobre
+   el fondo de la tarjeta acertada; se oscurece lo justo para el contraste AA (4,5:1). El rojo ya lo da. */
+.ova-empar__item.is-correct .ova-empar__marca { color: color-mix(in srgb, var(--success) 88%, black); }
+
 /* La carita de marca: ojos en verde y la boca en dorado (sonríe al acertar,
    se invierte al fallar). Entra con un pop. */
 /* En la evaluación, el padding del motor (.ova-evalquiz .ova-quiz__feedback) pisaba este: la carita
@@ -2733,3 +2737,20 @@ html .ova-tabs.ova-tabs--vertical .ova-tabs__btn.is-active {
 .ova-acordeon--numerado .ova-acordeon__item:not(.is-open) .ova-acordeon__body-inner { opacity: 0; transition: opacity .12s ease, padding-bottom .4s ease; }
 .ova-acordeon--numerado .ova-acordeon__item.is-open .ova-acordeon__body-inner { opacity: 1; transition: opacity .25s ease .12s, padding-bottom .4s ease; }
 @media (prefers-reduced-motion: reduce) { .ova-acordeon--numerado .ova-acordeon__body-inner { transition: none !important; } }
+
+/* --- Menú lateral: relleno dorado en la barra de progreso y en la barra compacta (KIT-015, D8 y D10) ---
+   El relleno del motor es el degradado de marca (verde): sobre el verde hondo del menú daba 1,5:1 y con
+   poco avance no se distinguía. Con el dorado se lee de un vistazo. El brillo va en el mismo color para
+   que no quede un halo verde. Solo con el menú oscuro: en la versión clara el menú es blanco, el dorado
+   daría 2,75:1 y el relleno conserva el color del motor (decisión del arquitecto, 2026-11-14). */
+html:not([data-version="clara"]) .ova-sidebar__progress .bar-fill,
+html:not([data-version="clara"]) .ova-sidebar__compacta .bar-fill {
+  background: var(--c-dorado);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--c-dorado) 45%, transparent);
+}
+/* La pista (el tramo sin avance) va al 14 % del texto del menú, como en el mockup aprobado (KIT-015,
+   post-auditoría, P2-3): con el 6 % del motor casi no se distinguía del fondo y la barra no se leía de
+   lado a lado. Solo con el menú oscuro, igual que el relleno dorado. */
+html:not([data-version="clara"]) .ova-sidebar__progress .bar {
+  background: color-mix(in srgb, var(--sb-text) 14%, transparent);
+}

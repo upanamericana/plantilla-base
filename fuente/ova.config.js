@@ -26,7 +26,7 @@ module.exports = {
   },
 
   course: {
-    code:             'CUADERNO DE APRENDIZAJE 1',   // ronda del cliente del 2026-10-26
+    code:             'SEMANA 1',   // KIT-015 (D3, D5): etiqueta del menú y de la barra compacta; encabezados y créditos siguen con «Cuaderno de aprendizaje 1» (ronda del 2026-10-26)
     name:             'Catálogo de componentes',
     subtitle:         'Plantilla base del recurso educativo',
     duration:         '',
@@ -35,6 +35,13 @@ module.exports = {
     preset:           'upanamericana',
     pdf:              '',
     portadaFullBleed: true,
+  },
+
+  /* TEXTOS DE LA INTERFAZ · lo que el motor pinta fuera del contenido del curso. `voz` es el tratamiento
+     (tú o usted) de los textos que escribe el motor, como los de Relacionar (KIT-016). Es la voz de
+     instituciones/upanamericana/catalogo.json; tests/voz-curso.test.js avisa si se separan. */
+  textos: {
+    voz: 'tú',
   },
 
   /* MENÚ · la estructura RED (la misma de Scala Learning):
