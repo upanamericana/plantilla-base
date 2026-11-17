@@ -135,9 +135,11 @@
       </nav>
     `;
 
-    // El panel entero hace scroll: la barra compacta entra en cuanto la barra del bloque de progreso empieza
-    // a salir por arriba (y la tapa), así el menú nunca queda sin progreso a la vista, tampoco cuando no
-    // alcanza a desplazarse hasta sacar el bloque entero. Sin barra pintada (menú colapsado u oculto), no entra.
+    // El panel entero hace scroll: la barra compacta entra en cuanto la etiqueta del bloque de progreso
+    // («Progreso» y «N/total») empieza a salir por arriba (y tapa el bloque), así el menú nunca queda sin la
+    // cifra a la vista, tampoco cuando no alcanza a desplazarse hasta sacar el bloque entero. Antes entraba con
+    // la barra y quedaba una franja con la línea sola, sin cifra (finanzas-personales, 2026-11-17). Sin barra
+    // pintada (menú colapsado u oculto), no entra.
     // `is-desplazado`: con el menú colapsado, «N/total» queda fijo arriba y toma fondo mientras los iconos
     // pasan por debajo; arriba del todo no lo lleva.
     if (!el.dataset.ovaScrollBound) {
@@ -145,7 +147,8 @@
       const alDesplazar = () => {
         const barra = el.querySelector('.ova-sidebar__progress .bar');
         const pintada = !!barra && barra.getClientRects().length > 0;
-        el.classList.toggle('is-scrolled', pintada && barra.getBoundingClientRect().top < el.getBoundingClientRect().top);
+        const borde = el.querySelector('.ova-sidebar__progress .label') || barra;
+        el.classList.toggle('is-scrolled', pintada && borde.getBoundingClientRect().top < el.getBoundingClientRect().top);
         el.classList.toggle('is-desplazado', el.scrollTop > 0);
       };
       el.addEventListener('scroll', alDesplazar, { passive: true });

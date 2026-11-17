@@ -1043,7 +1043,9 @@ a.ova-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outl
 }
 .ova-evalquiz__btn--prev { padding: 12px 14px; }
 @media (max-width: 720px) {
-  .ova-evalquiz__nav { gap: 12px; padding-left: 14px; }
+  /* La barra con «Siguiente» queda pegada abajo mientras se desplaza la actividad: en celular las
+     diapositivas son más altas que la pantalla (revisión del diagramador, finanzas-personales, 2026-11-17). */
+  .ova-evalquiz__nav { gap: 12px; padding-left: 14px; position: sticky; bottom: 12px; z-index: 5; }
   .ova-evalquiz__nav .ova-evalquiz__progress-bar { min-width: 48px; }
   .ova-evalquiz__nav .ova-evalquiz__btn { flex: 0 0 auto; }
 }
@@ -2490,6 +2492,22 @@ html:not([data-version="oscura"]) .ova-acordeon--numerado .ova-acordeon__item:no
 /* Proceso escalonado: sin el sol del catálogo sobre el último peldaño; en UP el final lo marca el
    peldaño en dorado (un solo elemento dorado por pieza). */
 .ova-ciclo__sol, .ova-escalones__sol { display: none; }
+/* Proceso escalonado: la escalera, centrada en vertical junto a sus cuatro pasos (en el catálogo queda
+   arriba de su columna). Revisión del diagramador de finanzas-personales/tema2, 2026-11-17. */
+.ova-ciclo--escalonado { align-items: center; }
+/* Ventana tras una línea de tiempo: el cronograma del catálogo no deja margen abajo y la ventana
+   quedaba a 8 px; se separa con el ritmo de bloque (40). Arreglo de UP mientras el catálogo no lo
+   corrige para todos (pendiente de REQ de kit; finanzas-personales/tema2, 2026-11-17). */
+.ova-cronograma + .ova-ventana { margin-top: 40px; }
+/* Puente: el párrafo corto que presenta la pieza que sigue va a 22 px de ella, como el llamado, y no
+   a 40, para que se lea con lo que abre (finanzas-personales/tema2, 2026-11-17). */
+.up-puente + *, .ova-screen > .up-puente + .ova-apa-tabla { margin-top: 22px; }
+/* Puente que presenta un interactivo: la instrucción se pega a su pieza (12 px) para que no quede
+   equidistante entre el puente y la pieza (finanzas-personales/tema3, 2026-11-17). */
+.ova-screen .up-puente + .ova-llamado + * { margin-top: 12px; }
+/* Banner oscuro: color de respaldo bajo el degradado (el verde más claro del degradado). A la vista no
+   cambia; el medidor lee el color de fondo y no el degradado (finanzas-personales/tema3, 2026-11-17). */
+.ova-banner:not(.ova-banner--claro) { background-color: #0F5C51; }
 
 /* =========================================================
    CATÁLOGO DEL KIT · REVISIÓN DEL DIAGRAMADOR (UP-001, T5)
